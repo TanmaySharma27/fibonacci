@@ -19,6 +19,7 @@ class fib(object):
 	def print_hello(self):
 		'''prints greetings'''
 		print 'Hello, Wel-come to Python'
+		print 'Something Changed!'
 	def print_py(self):
 		for i in range(self.n):
 			for j in range(i):
