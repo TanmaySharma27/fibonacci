@@ -1,38 +1,23 @@
-'''fib class file'''
-class fib(object):
-	'''Creates class fib'''
-	def __init__(self,n):
-		self.n=n
+# Program to display the Fibonacci sequence up to n-th term
 
-	def print_ser(self):
-		'''Creates print_series method'''
-	#=input("enter the no. of terms - ")
-		x=0
-		y=1
-		print x
-		print y
-		for x in range(self.n-2):
-			z=x+y
-			print z
-			x=y
-			y=z
-	def print_hello(self):
-		'''prints greetings'''
-		print 'Hello, Wel-come to Python'
-		print 'Something Changed!'
-	def print_py(self):
-		for i in range(self.n):
-			for j in range(i):
-				print (j+1),
-			print
+nterms = int(input("How many terms? "))
 
-		for k in range(self.n,0,-1):
-			for l in range(k):
-				print l+1,
-			print
-	def print_all(self):
-		self.print_ser()
-		self.print_py()
-		self.print_hello()
-		
+# first two terms
+n1, n2 = 0, 1
+count = 0
 
+# check if the number of terms is valid
+if nterms <= 0:
+   print("Please enter a positive integer")
+elif nterms == 1:
+   print("Fibonacci sequence upto",nterms,":")
+   print(n1)
+else:
+   print("Fibonacci sequence:")
+   while count < nterms:
+       print(n1)
+       nth = n1 + n2
+       # update values
+       n1 = n2
+       n2 = nth
+       count += 1
